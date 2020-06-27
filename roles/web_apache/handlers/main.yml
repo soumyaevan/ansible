@@ -1,0 +1,4 @@
+---
+# handlers file for web_apache
+  - name: html file updated
+    apt: name=default-jdk update_cache=yes state=latest

@@ -1,0 +1,9 @@
+---
+  - hosts: slave1
+    become: yes 
+    roles:
+      - web_apache
+  - hosts: slave2
+    become: yes
+    roles:
+      - web_nginx

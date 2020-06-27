@@ -1,0 +1,5 @@
+---
+# tasks file for web_nginx
+- include: install.yml
+- include: configure.yml 
+- include: service.yml

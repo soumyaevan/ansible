@@ -1,0 +1,23 @@
+---
+  - hosts: slave1
+    become: yes 
+    tasks:
+      - debug:
+          msg: "before we run our role" 
+      - import_role:
+          name: web_apache 
+      - include_role:
+          name: web_apache 
+      - debug:
+          msg: "after we ran our role"
+  - hosts: slave2
+    become: yes 
+    tasks:
+      - debug:
+          msg: "before we run our role" 
+      - import_role:
+          name: web_nginx 
+      - include_role:
+          name: web_nginx 
+      - debug:
+          msg: "after we ran our role"

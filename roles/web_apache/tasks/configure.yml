@@ -1,0 +1,5 @@
+---
+  - name: send index.html file
+    copy: src=index.html dest=/var/www/html/
+    notify:
+     - html file updated

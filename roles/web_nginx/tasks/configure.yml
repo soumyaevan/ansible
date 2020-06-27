@@ -1,0 +1,4 @@
+---
+#configure apache2.conf and send copy.html file 
+  - name: send html file
+    copy: src=index.html dest=/var/www/html/
